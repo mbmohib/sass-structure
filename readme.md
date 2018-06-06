@@ -1,6 +1,6 @@
 # Sass Structure
 
-This is a simple **Webpack Boilarplate**.
+This is a simple **Sass Structure for Frontend**.
 
 
 
