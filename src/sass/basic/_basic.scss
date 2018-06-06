@@ -1,0 +1,35 @@
+$englishPrimaryFont: 'Lato', sans-serif;
+$banglaPrimaryFont: 'SolaimanLipi', sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $banglaPrimaryFont, $englishPrimaryFont;
+    background: $bodyColor;
+    font-size: 1rem;
+}
+
+a {
+    color: $fontColor;
+
+    &:hover {
+        text-decoration: none;
+        color: $linkColor;
+    }
+}
+
+address,
+p,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+em {
+    font-style: normal;
+}
