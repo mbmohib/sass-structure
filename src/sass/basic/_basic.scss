@@ -1,10 +1,7 @@
-$englishPrimaryFont: 'Lato', sans-serif;
-$banglaPrimaryFont: 'SolaimanLipi', sans-serif;
-
 body {
     margin: 0;
     padding: 0;
-    font-family: $banglaPrimaryFont, $englishPrimaryFont;
+    font-family: $primaryFont;
     background: $bodyColor;
     font-size: 1rem;
 }
