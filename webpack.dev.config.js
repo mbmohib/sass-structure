@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/js/bootstrap.js',
@@ -7,6 +8,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         publicPath: '/dist'
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.jpeg', '.jpg', '.gif', '.png'],
+        alias: { 
+            'vendor-css': path.resolve(__dirname, './vendors/css'),
+            'vendor-js': path.resolve(__dirname, './vendors/js'),
+        }
     },
     devServer: {
         port: 3000,
@@ -76,6 +84,10 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({
             filename: 'bundle.css'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ]
 }
