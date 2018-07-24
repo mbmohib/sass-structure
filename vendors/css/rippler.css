@@ -30,8 +30,7 @@
 }
 .rippler-circle-mask {
     border-radius: 50%;
-
-    /* -webkit-mask: url(../svg/circle.svg) no-repeat; */
+    -webkit-mask: url(/circle.svg) no-repeat;
     -webkit-mask-size: 100%;
 }
 .rippler-effect {
@@ -95,3 +94,4 @@
 .rippler-bs-danger .rippler-div {
     background-color: #d2322d;
 }
+/*# sourceMappingURL=rippler.css.map */
