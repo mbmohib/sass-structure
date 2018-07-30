@@ -1,4 +1,4 @@
-import 'vendor-css/rippler.css';
+// import 'vendor-css/rippler.css';
 //Import CSS files
 import '../css/app.css'
 
@@ -9,4 +9,4 @@ import '../sass/app.scss'
 import './app';
 
 import 'bootstrap';
-import 'vendor-js/rippler';
+// import 'vendor-js/rippler';
