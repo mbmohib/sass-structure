@@ -8,5 +8,3 @@ import '../sass/app.scss'
 //Import JS files
 import './app';
 
-import 'bootstrap';
-// import 'vendor-js/rippler';

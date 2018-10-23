@@ -29,9 +29,6 @@ module.exports = {
                 use: [
                     {
                         loader: 'babel-loader',
-                        options: {
-                            presets: ['env']
-                        }
                     }
                 ]
             },
@@ -67,7 +64,19 @@ module.exports = {
                 })
             },
             {
-                test: /\.(png|jpg|gif|woff2|svg)$/,
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                exclude: [/images/],
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                exclude: [/fonts/],
                 use: [
                     {
                         loader: 'file-loader',

@@ -21,23 +21,28 @@ module.exports = {
                 use: [
                     {
                         loader: 'babel-loader',
-                        options: {
-                            presets: ['env']
-                        }
                     }
                 ]
             },
             {
-                test: /\.(scss|sass)$/,
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: [
                         {
-                            loader: 'css-loader', options: {
+                            loader: 'css-loader',
+                            options: {
                                 sourceMap: true
                             }
                         },
                         {
-                            loader: 'sass-loader', options: {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
                                 sourceMap: true
                             }
                         }
@@ -47,11 +52,23 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader']
+                    use: ['css-loader', 'postcss-loader']
                 })
             },
             {
-                test: /\.(png|jpg|gif|woff2|svg)$/,
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                exclude: [/images/],
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                exclude: [/fonts/],
                 use: [
                     {
                         loader: 'file-loader',
