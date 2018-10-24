@@ -1,17 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: $primaryFont;
-    background: $bodyColor;
+    font-family: $title-font;
+    background: $body-color;
     font-size: 1rem;
 }
 
 a {
-    color: $fontColor;
+    color: $font-color;
 
     &:hover {
         text-decoration: none;
-        color: $linkColor;
+        color: $link-color;
     }
 }
 

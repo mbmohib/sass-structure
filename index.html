@@ -4,35 +4,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="icon" type="image/png" href="src/images/favicon.png" />
 
-    <title>Sass Structure</title>
-    
+    <title>Sass Boilarplate</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/css/uikit.min.css" />
     <link rel="stylesheet" href="dist/bundle.css">
+
 </head>
 
 
 <body>
-    <header>
-        <div class="container">
-            <h2 class="my-3">Features</h2>
-            <div class="row">
-                <div class="col-4">
-                    <ul class="list-group">
-                        <li class="list-group-item">Sass Structure</li>
-                        <li class="list-group-item">Hover Effects Mixin Collection</li>
-                        <li class="list-group-item">Ripple Effect</li>
-                        <li class="list-group-item">Bootstrap install with NPM</li>
-                        <li class="list-group-item">On/Off Bootstrap Components</li>
-                        <li class="list-group-item">Can override any Bootstrap variable</li>
-                        <li class="list-group-item">Can use any Bootstrap variable</li>
-                      </ul>
-                      <button class="btn btn-primary my-3 ripple p-5">Ripple Me</button>
-                </div>
+    <div class="uk-container uk-margin-top uk-padding">
+        <div class="uk-section">
+            <Button class="button button--text-default uk-margin-right ripple">Default</Button>
+            <Button class="button button--text-primary uk-margin-right ripple">Primary</Button>
+            <Button class="button button--text-secondary uk-margin-right ripple">Secondary</Button>
+            <Button class="button button--text-disabled uk-margin-right ripple">Disabled</Button>
+        </div>
+
+        <div class="uk-section">
+            <Button class="button button--outline-default uk-margin-right ripple ripple--default">Default</Button>
+            <Button class="button button--outline-primary uk-margin-right ripple">Primary</Button>
+            <Button class="button button--outline-secondary uk-margin-right ripple">Secondary</Button>
+            <Button class="button button--outline-disabled uk-margin-right ripple">Disabled</Button>
+        </div>
+
+        <div class="uk-section">
+            <Button class="button button--default uk-margin-right ripple">Default</Button>
+            <Button class="button button--primary uk-margin-right ripple">Primary</Button>
+            <Button class="button button--secondary uk-margin-right ripple">Secondary</Button>
+            <Button class="button button--disabled uk-margin-right ripple">Disabled</Button>
+        </div>
+
+        <div class="uk-section">
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m ripple ripple--default">
+                <h3 class="uk-card-title">Default</h3>
+                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
-    </header>
 
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit-icons.min.js"></script>
     <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 

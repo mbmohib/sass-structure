@@ -43,7 +43,7 @@
         "style-loader": "^0.19.1",
         "uglifyjs-webpack-plugin": "^1.2.4",
         "webpack": "^4.4.1",
-        "webpack-cli": "^2.0.13",
+        "webpack-cli": "^3.1.2",
         "webpack-dev-server": "^3.1.1"
     },
     "dependencies": {

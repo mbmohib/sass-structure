@@ -1,0 +1,40 @@
+.ripple {
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: scale(10, 10);
+        opacity: 0;
+        background-image: radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+        transition: transform 0.5s, opacity 1s;
+    }
+    
+    &:active::after {
+        transform: scale(0, 0);
+        opacity: 0.3;
+        transition: 0s;
+    }
+    
+    &--default:after {
+        background-image: radial-gradient(circle, $grey-color 10%, transparent 10.01%);
+    }
+
+    &--primary:after {
+        background-image: radial-gradient(circle, $primary-color 10%, transparent 10.01%);
+    }
+
+    &--secondary:after {
+        background-image: radial-gradient(circle, $secondary-color 10%, transparent 10.01%);
+    }
+}
