@@ -3,7 +3,7 @@ $fablet-width: (min-width: 425px);
 $tablet-width: (min-width: 768px);
 $small-laptop-width: (min-width: 992px);
 $laptop-width: (min-width: 1200px);
-$desktop-width: (min-width: 1400px);
+$desktop-width: (min-width: 1600px);
 
 
 /*
@@ -36,7 +36,7 @@ $desktop-width: (min-width: 1400px);
 /*
     Small Laptop from 992px
 ----------------------------------------*/
-@mixin smallLaptop {
+@mixin small-laptop {
     @media #{$small-laptop-width} {
         @content;
     }
@@ -45,7 +45,7 @@ $desktop-width: (min-width: 1400px);
     Laptop from 1200px (15.6 & 14 Inchi)
 ----------------------------------------*/
 @mixin laptop {
-    @media #{$large-laptop-width} {
+    @media #{$laptop-width} {
         @content;
     }
 }
