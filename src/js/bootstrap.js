@@ -1,4 +1,3 @@
-// import 'vendor-css/rippler.css';
 //Import CSS files
 import '../css/app.css'
 

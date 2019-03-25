@@ -1,9 +1,10 @@
 $mobile-width: (min-width: 360px);
 $fablet-width: (min-width: 425px);
-$tablet-width: (min-width: 768px);
-$small-laptop-width: (min-width: 992px);
+$tablet-width: (min-width: 640px);
+$small-laptop-width: (min-width: 960px);
 $laptop-width: (min-width: 1200px);
 $desktop-width: (min-width: 1600px);
+$fourke-width: (min-width: 2500px);
 
 
 /*
@@ -51,10 +52,27 @@ $desktop-width: (min-width: 1600px);
 }
 
 /*
-    Desktop from 1400px
+    Desktop from 1600px
 ----------------------------------------*/
 @mixin desktop {
     @media #{$desktop-width} {
+        @content;
+    }
+}
+
+/*
+    4K width from 2500px
+----------------------------------------*/
+@mixin fourke {
+    @media #{$fourke-width} {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
         @content;
     }
 }

@@ -1,9 +1,21 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: $title-font;
-    background: $body-color;
     font-size: 1rem;
+    font-family: $normal-font;
+    background: $body-color;
+    color: $font-color;
+    text-rendering: optimizeLegibility;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        main {
+            flex-grow: 1;
+        }
+    }
 }
 
 a {
@@ -24,9 +36,158 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 0;
+    margin: 0;
+    font-family: $normal-font; 
+}
+
+h1 {
+    font-weight: $light-weight;
+    margin-bottom: $small-space;
+    font-size: 1.8rem;
+
+    @include small-laptop {
+        font-size: 2rem;
+    }
+
+    @include fourke {
+        font-size: 2.4rem;
+    }
+}
+
+h2 {
+    font-weight: $light-weight;
+    margin-bottom: $small-space;
+    font-size: 1.6rem;
+
+    @include small-laptop {
+        font-size: 1.8rem;
+    }
+
+    @include fourke {
+        font-size: 2.2rem;
+    }
+}
+
+h3 {
+    font-weight: $light-weight;
+    margin-bottom: $small-space;
+    font-size: 1.3rem;
+
+    @include small-laptop {
+        font-size: 1.5rem;
+    }
+
+    @include fourke {
+        font-size: 1.9rem;
+    }
+}
+
+h4 {
+    font-weight: $light-weight;
+    margin-bottom: $small-space;
+    font-size: 1rem;
+
+    @include small-laptop {
+        font-size: 1.2rem;
+    }
+
+    @include fourke {
+        font-size: 1.6rem;
+    }
+}
+
+h5 {
+    font-weight: $light-weight;
+    margin-bottom: $small-space;
+    font-size: 0.8rem;
+
+    @include small-laptop {
+        font-size: 1rem;
+    }
+
+    @include fourke {
+        font-size: 1.4rem;
+    }
+}
+
+h6 {
+    font-weight: $light-weight;
+    margin-bottom: $small-space;
+    font-size: 0.7rem;
+
+    @include small-laptop {
+        font-size: 0.8rem;
+    }
+
+    @include fourke {
+        font-size: 1.2rem;
+    }
+}
+
+table {
+    border-collapse: collapse;
+
+    thead {
+        background: #f9f9f9;
+
+        th {
+            padding: 10px 10px;
+        }
+    }
+
+    tr {
+        display: table-row;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+    
+    td {
+        padding: 15px 30px;
+        display: table-cell;
+        border-left: 1px solid #ddd;
+
+        &:last-child {
+            border-right: 1px solid #ddd;
+        }
+    }
 }
 
 em {
     font-style: normal;
+}
+
+label {
+    font-family: $normal-font;
+    font-weight: $regular-weight;
+    font-size: 1.2rem;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+select {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

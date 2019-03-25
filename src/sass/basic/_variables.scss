@@ -3,23 +3,26 @@
 $white-color: #FFFFFF;
 $font-color: #212529;
 $link-color : #0056b3;
-$body-color: #EDEEF3;            
+$body-color: #FFFFFF;            
 
 
-$primary-color: #3168D1;             
-$secondary-color: #EB7A3F;
-$grey-color: #e0e0e0;
+$primary-color: #fab701;
+$secondary-color: #8d8d8d;
+$tertiary-color: #3498DB;
+$grey-color: #999;
+$grey-color-primary: #666;
 
 /* Fonts
 ---------------------------*/
-$title-font: 'Nunito', sans-serif;
-$normal-font: 'Poiret One', cursive;
+$title-font: 'Montserrat', sans-serif;
+$normal-font: 'Raleway', sans-serif;
 
 /* Font Weight
 ---------------------------*/
-$low-weight: 300;
+$xlight-weight: 200;
+$light-weight: 300;
 $regular-weight: 400;
-$midium-weight: 600;
+$medium-weight: 500;
 $high-weight: 700;
 
 /* z-index
@@ -34,5 +37,9 @@ $tiny-space: 10px;
 $small-space: 20px;
 $medium-space: 40px;
 $large-space: 80px;
-$xLarge-space: 120px;
+$xlarge-space: 120px;
+
+$small-shadow: 0 2px 8px rgba(0,0,0,0.08);
+$medium-shadow: 0 5px 15px rgba(0,0,0,0.08);
+$large-shadow: 0 14px 25px rgba(0,0,0,0.16);
 

@@ -1,26 +1,172 @@
 .title {
     font-family: $title-font;
+    text-transform: capitalize;
+    margin-bottom: $tiny-space;
     font-size: 1.5rem;
 
     &--xsmall {
         font-size: 1rem;
+
+        @include fourke {
+            font-size: 1.3rem;
+        }
     }
 
     &--small {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+
+        @include small-laptop {
+            font-size: 1.2rem;
+        }
+
+        @include fourke {
+            font-size: 1.6rem;
+        }
     }
 
     &--medium {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+
+        @include small-laptop {
+            font-size: 1.4rem;
+        }
+
+        @include fourke {
+            font-size: 2rem;
+        }
+    }
+
+    &--large {
+        margin-bottom: $small-space;
+        font-size: 1.6rem;
+
+        @include small-laptop {
+            font-size: 1.8rem;
+        }
+
+        @include fourke {
+            font-size: 2.7rem;
+        }
+    }
+
+    &--xlarge {
+        font-weight: $light-weight;
+        margin-bottom: $small-space;
+        font-size: 1.8rem;
+
+        @include small-laptop {
+            font-size: 2.7rem;
+        }
+
+        @include fourke {
+            font-size: 3rem;
+        }
     }
 }
 
 .subtitle {
     font-family: $normal-font;
+    color: $grey-color;
     font-size: 1rem;
+
+    @include fourke {
+        font-size: 1.4rem;
+    }
 
     &--small {
         font-size: 0.8rem;
-        color: $grey-color;
+
+        @include fourke {
+            font-size: 1.3rem;
+        }
+    }
+
+    &--medium {
+        font-size: 1.1rem;
+
+        @include small-laptop {
+            font-size: 1.2rem;
+        }
+
+        @include fourke {
+            font-size: 1.6rem;
+        }
+    }
+
+    &--large {
+        font-size: 1.2rem;
+        
+        @include small-laptop {
+            font-size: 1.3rem;
+        }
+
+        @include fourke {
+            font-size: 2rem;
+        }
+    }
+}
+
+.paragraph {
+    font-family: $normal-font;
+    margin-bottom: $tiny-space;
+    font-size: 1rem !important;
+    line-height: 1.7;
+    font-weight: $regular-weight;
+
+    @include small-laptop {
+        line-height: 1.8;
+        font-size: 1.1rem !important;
+    }
+    
+    @include fourke {
+        line-height: 1.6;
+        font-size: 1.6rem !important;
+    }
+
+    &--xsmall {
+        font-size: 0.9rem !important;
+
+        @include fourke {
+            font-size: 1.4rem;
+        }
+    }
+
+    &--small {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+
+        @include small-laptop {
+            font-size: 1rem !important;
+        }
+
+        @include fourke {
+            line-height: 1.6;
+            font-size: 1.4rem !important;
+        }
+    }
+
+    &--medium {
+        font-weight: $medium-weight;
+        font-size: 1.4rem !important;
+        letter-spacing: 1px;
+
+        @include fourke {
+            font-size: 2rem !important;
+        }
+    }
+
+    &--large {
+        font-weight: $medium-weight;
+        font-size: 1.6rem !important;
+
+        @include fourke {
+            font-size: 2.3rem !important;
+        }
+    }
+}
+
+.text {
+    &--meta {
+        opacity: 0.9;
     }
 }

@@ -1,10 +1,11 @@
 //Import SASS files
-@import 'basic/_variables.scss';
-@import 'basic/_basic.scss';
-
 @import 'helpers/_media-query.scss';
 @import 'helpers/_mixins.scss';
 @import 'helpers/_hover-effect.scss';
+
+@import 'basic/_variables.scss';
+@import 'basic/_basic.scss';
+
 
 @import 'my-components/_button.scss';
 @import 'my-components/_ripple.scss';

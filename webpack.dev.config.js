@@ -3,18 +3,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/js/bootstrap.js',
+    entry: ['babel-polyfill', './src/js/bootstrap.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         publicPath: '/dist'
-    },
-    resolve: {
-        extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.jpeg', '.jpg', '.gif', '.png'],
-        alias: { 
-            'vendor-css': path.resolve(__dirname, './vendors/css'),
-            'vendor-js': path.resolve(__dirname, './vendors/js'),
-        }
     },
     devServer: {
         port: 3000,
@@ -82,8 +75,8 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'images/',
-                            publicPath: ''
+                            outputPath: '/images',
+                            publicPath: 'images'
                         }
                     }
                 ]
@@ -93,10 +86,6 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({
             filename: 'bundle.css'
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
         })
     ]
 }
